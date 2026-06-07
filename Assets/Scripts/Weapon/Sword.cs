@@ -7,7 +7,7 @@ public class Sword : MonoBehaviour,IWeapon
 {
     [SerializeField] private GameObject slashAnimPrefab;
     [SerializeField] private Transform slashAnimSpawnPoint;
-    [SerializeField] private float  swwordAttackCD = 0.5f;
+    [SerializeField] private WeaponInfo weaponInfo;
 
     private Transform weaponCollider;
     private Animator myAnimator;
@@ -30,21 +30,14 @@ public class Sword : MonoBehaviour,IWeapon
         MouseFollowWithOffset();
     }
 
+    public WeaponInfo GetWeaponInfo() { return weaponInfo; }
+
     public void Attack()
     {
-        //isAttacking = true;
         myAnimator.SetTrigger("Attack");
         weaponCollider.gameObject.SetActive(true);
         slashAnim = Instantiate(slashAnimPrefab, slashAnimSpawnPoint.position, Quaternion.identity);
         slashAnim.transform.parent = this.transform.parent;
-        StartCoroutine(AttackCDRoutine());
-        Debug.Log("Sword Attack");
-    }
-
-    private IEnumerator AttackCDRoutine()
-    {
-        yield return new WaitForSeconds(swwordAttackCD);
-        ActiveWeapon.Instance.ToggleIsAttacking(false);
     }
 
     public void DoneAttackingAnimEvent()
