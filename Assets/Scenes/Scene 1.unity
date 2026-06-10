@@ -11305,6 +11305,9 @@ GameObject:
   - component: {fileID: 1931284789}
   - component: {fileID: 1931284788}
   - component: {fileID: 1931284787}
+  - component: {fileID: 1931284792}
+  - component: {fileID: 1931284791}
+  - component: {fileID: 1931284790}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -11421,9 +11424,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eeaa2162b40e8d74ead29b2adea8fcd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
-  dashSpeed: 4
-  myTrailRenderer: {fileID: 960197891}
   weaponCollider: {fileID: 1725505594}
 --- !u!95 &1931284784
 Animator:
@@ -11535,6 +11535,45 @@ MonoBehaviour:
   maxHealth: 3
   knockBackThrustAmount: 10
   damageRecoveryTime: 1
+--- !u!114 &1931284790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931284779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841698006ca406043a4212a2867c0f8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1931284791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931284779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d55efdab36422284baec1811d95b3e16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1931284792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931284779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4ac8b029370a04428a28e3e13efc26f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  dashMultiplier: 4
+  trailRenderer: {fileID: 960197891}
 --- !u!1001 &1952677784
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -20,13 +20,21 @@ public class ActiveWeapon : Singleton<ActiveWeapon>
     private void OnEnable()
     {
         playerControls.Enable();
+
+        playerControls.Combat.Attack.started += OnAttackStarted;
+        playerControls.Combat.Attack.canceled += OnAttackCanceled;
+    }
+
+    private void OnDisable()
+    {
+        playerControls.Combat.Attack.started -= OnAttackStarted;
+        playerControls.Combat.Attack.canceled -= OnAttackCanceled;
+
+        playerControls.Disable();
     }
 
     private void Start()
     {
-        playerControls.Combat.Attack.started += _ => StartAttacking();
-        playerControls.Combat.Attack.canceled += _ => StopAttacking();
-
         AttackCooldown();
     }
 
@@ -40,7 +48,14 @@ public class ActiveWeapon : Singleton<ActiveWeapon>
         CurrenActiveWeapon = newWeapom;
 
         AttackCooldown();
-        timeBetweenAttacks = (CurrenActiveWeapon as IWeapon).GetWeaponInfo().weaponCooldown;
+
+        IWeapon weapon = CurrenActiveWeapon as IWeapon;
+
+        if (weapon != null)
+        {
+            timeBetweenAttacks =
+                weapon.GetWeaponInfo().weaponCooldown;
+        }
     }
     public void WeaponNull()
     {
@@ -60,6 +75,15 @@ public class ActiveWeapon : Singleton<ActiveWeapon>
         isAttacking = false;
     }
 
+    private void OnAttackStarted(UnityEngine.InputSystem.InputAction.CallbackContext context)
+    {
+        StartAttacking();
+    }
+
+    private void OnAttackCanceled(UnityEngine.InputSystem.InputAction.CallbackContext context)
+    {
+        StopAttacking();
+    }
     private void StartAttacking()
     {
         attackButtonDown = true;

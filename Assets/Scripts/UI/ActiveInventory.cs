@@ -16,14 +16,26 @@ public class ActiveInventory : MonoBehaviour
 
     private void Start()
     {
-        playerControls.Inventory.Keyboard.performed += ctx => ToggleActiveSlot((int)ctx.ReadValue<float>());
-
         ToggleActiveHighlight(0);
     }
 
     private void OnEnable()
     {
         playerControls.Enable();
+
+        playerControls.Inventory.Keyboard.performed += OnInventoryKeyPressed;
+    }
+
+    private void OnDisable()
+    {
+        playerControls.Inventory.Keyboard.performed -= OnInventoryKeyPressed;
+
+        playerControls.Disable();
+    }
+    private void OnInventoryKeyPressed(
+    UnityEngine.InputSystem.InputAction.CallbackContext ctx)
+    {
+        ToggleActiveSlot((int)ctx.ReadValue<float>());
     }
 
     private void ToggleActiveSlot(int numValue)
@@ -33,6 +45,9 @@ public class ActiveInventory : MonoBehaviour
 
     private void ToggleActiveHighlight(int indexNum)
     {
+        if (indexNum < 0 || indexNum >= transform.childCount)
+            return;
+
         activeSlotIndexNum = indexNum;
         foreach (Transform inventorySlot in this.transform) {
             inventorySlot.GetChild(0).gameObject.SetActive(false);
