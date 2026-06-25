@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 9122628954613631315}
   - component: {fileID: 6835620942472396194}
   - component: {fileID: 6763893672814553096}
+  - component: {fileID: 4391081059109756470}
   m_Layer: 0
   m_Name: Barrel
   m_TagString: Untagged
@@ -134,3 +135,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyVFX: {fileID: 4974164038021799458, guid: e9451301ea2d1cd43b02969a0bfab968, type: 3}
+--- !u!114 &4391081059109756470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6635418193016698166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0a35785e214ee84093fa5c689b6a0bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goilCoinPrefab: {fileID: 2193514680841044774, guid: e4bcb7628ef9e5949b5bb8e65a1c0a73, type: 3}
