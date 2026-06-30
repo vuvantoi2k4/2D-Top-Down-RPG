@@ -148,5 +148,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goilCoin: {fileID: 2193514680841044774, guid: e4bcb7628ef9e5949b5bb8e65a1c0a73, type: 3}
-  healthGlobe: {fileID: 5232622375233533376, guid: 3dcac0bb1c476e84696f106f65791f24, type: 3}
+  healthGlobe: {fileID: 2193514680841044774, guid: 1024806e766755142b45c3cdffb8b9d2, type: 3}
   staminaGlobe: {fileID: 2193514680841044774, guid: ef378adeb8541d54f86702eb4f646bcc, type: 3}

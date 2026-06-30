@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 9178566357871895443}
   - component: {fileID: 8382232938305323445}
   - component: {fileID: 4685242313918295638}
+  - component: {fileID: -822510498367675209}
   m_Layer: 0
   m_Name: Blue Slime
   m_TagString: Untagged
@@ -260,3 +261,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd26c49e26ea0714782f40abc45ba7c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-822510498367675209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6748594091916711407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0a35785e214ee84093fa5c689b6a0bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goilCoin: {fileID: 2193514680841044774, guid: e4bcb7628ef9e5949b5bb8e65a1c0a73, type: 3}
+  healthGlobe: {fileID: 2193514680841044774, guid: 1024806e766755142b45c3cdffb8b9d2, type: 3}
+  staminaGlobe: {fileID: 2193514680841044774, guid: ef378adeb8541d54f86702eb4f646bcc, type: 3}

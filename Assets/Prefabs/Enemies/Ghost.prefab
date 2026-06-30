@@ -103,6 +103,7 @@ GameObject:
   - component: {fileID: 6891810899857947200}
   - component: {fileID: 8262647746536447743}
   - component: {fileID: 2293499450727211619}
+  - component: {fileID: -5880084438971218209}
   - component: {fileID: 108246355198882748}
   m_Layer: 0
   m_Name: Ghost
@@ -342,6 +343,21 @@ MonoBehaviour:
   burstCount: 5
   timeBetweenBursts: 0.3
   restTime: 0.5
+--- !u!114 &-5880084438971218209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7976876482879624167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0a35785e214ee84093fa5c689b6a0bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goilCoin: {fileID: 2193514680841044774, guid: e4bcb7628ef9e5949b5bb8e65a1c0a73, type: 3}
+  healthGlobe: {fileID: 2193514680841044774, guid: 1024806e766755142b45c3cdffb8b9d2, type: 3}
+  staminaGlobe: {fileID: 2193514680841044774, guid: ef378adeb8541d54f86702eb4f646bcc, type: 3}
 --- !u!210 &108246355198882748
 SortingGroup:
   m_ObjectHideFlags: 0

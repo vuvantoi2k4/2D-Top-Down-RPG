@@ -1,10 +1,13 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class SlimeAttack : MonoBehaviour, IEnemy
 {
-    public void Attack() {
-        Debug.Log("slimeattack");
+    public void Attack()
+    {
+        
     }
+
 }
